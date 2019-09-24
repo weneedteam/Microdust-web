@@ -28,8 +28,37 @@ body {
 }
 
 html,
-body{
-  font-family: "굴림", Dotum, "돋움", Helvetica, AppleSDGothicNeo, sans-serif;
+body {
+  min-height: 100%;
+  height: 100%;
+  font-family: 'Noto Sans Korean', sanas-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #1c2023;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+button, input, optgroup, select, textarea {
+  font-family: 'Noto Sans Korean', sanas-serif;
+}
+i {
+  font-style: normal;
+}
+hr {
+  display: none;
+}
+button {
+  outline: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+#app {
+  min-width: 1200px;
+  height: 100%;
 }
 
 /**
