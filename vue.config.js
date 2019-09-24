@@ -4,6 +4,7 @@ const fs = require("fs");
 module.exports = { 
 	chainWebpack: config => {
 		config.resolve.alias.set("@", path.resolve(__dirname, "src"));
+		config.resolve.alias.set("@Style", path.resolve(__dirname, "src/Styles"));
 	},
 	devServer: {
 		contentBase: path.join(__dirname, "dist"),
@@ -12,9 +13,12 @@ module.exports = {
 		port: 9000
 	},
 	css: {
-		loaderOption: {
+		loaderOptions: {
 			sass: {
-				data: `@import "@/Styles/_normalized.scss";`
+				data: `
+					@import "@/Styles/normalized.scss";
+					@import "@/Styles/layout.scss";
+				`
 			}
 		}
 	}
